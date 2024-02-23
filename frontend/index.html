@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cors</title>
+</head>
+<body>
+    <h2>Cors</h2>
+</body>
+<script>
+    async function cors(){
+        const data = await fetch('http://localhost:3000/user',{
+            method:'get',
+            headers:{
+                'Content-Type':'application/json',
+                'Authorization':'lwoeandjna',
+                'x-type-request':'browser'
+            },
+            withCredentials:'true'
+            
+        })
+        .then(res=>res.json())
+        .then(dados=>console.log(dados));
+
+        
+    }
+
+    cors()
+</script>
+</html>
