@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "live":"live-server --port=5000 --host=localhost"
+    "live":"live-server --port=5025 --host=localhost"
   },
   "keywords": [],
   "author": "",

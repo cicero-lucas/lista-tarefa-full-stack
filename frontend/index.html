@@ -3,29 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cors</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="./assets/js/index.js" defer></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Lista de tarefa</title>
 </head>
 <body>
-    <h2>Cors</h2>
+
+    <main>
+        <form class="addForm" >
+            <input type="text" placeholder="digite sua tarefa" class="inputTarefa" name="tarefa">
+            <button type="submit">Add</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tarefa</th>
+                    <th>Cridado em</th>
+                    <th>status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                    <td> titulo</td>
+                    <td> data  as a </td>
+                    <td> 
+                        <select name="status" id="">
+                            <option value="0">pendente</option>
+                            <option value="1">andamento</option>
+                            <option value="2">concluido</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn_ac">
+                            <span class="material-symbols-outlined">
+                                delete
+                            </span>
+                        </button>
+                        <button class="btn_ac">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </button>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </main>
+   
+
+    
 </body>
 <script>
-    async function cors(){
-        const data = await fetch('http://localhost:3000/user',{
-            method:'get',
-            headers:{
-                'Content-Type':'application/json',
-                'Authorization':'lwoeandjna',
-                'x-type-request':'browser'
-            },
-            withCredentials:'true'
-            
-        })
-        .then(res=>res.json())
-        .then(dados=>console.log(dados));
-
-        
-    }
-
-    cors()
+    
 </script>
 </html>
