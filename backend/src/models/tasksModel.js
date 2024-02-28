@@ -30,9 +30,9 @@ const createTarefa = async (task) =>{
 
 const deletarTarefa = async (id) =>{
     try{
-        const query = 'delete form tb_tarefas where id_tarefa = ?';
+        const query = 'delete from tb_tarefas where id_tarefa = ?';
         const deletar= await connection.execute(query,[id]);
-
+       
         return deletar;
     }catch{
         return "erro ao deletar"
@@ -42,10 +42,10 @@ const deletarTarefa = async (id) =>{
 
 const atualizarTarefa = async (id,task) =>{
     try{
-        const {title, status}= task;
-
-        const query= 'UPDATE tb_tarefa set tb_t = "?", tb_status = ? WHERE id_tarefas = ?;'
-        const atualizar= await connection.execute(query,[title,status,id]);
+        const {title, status,dataAtualizacao}= task;
+        const query= 'UPDATE tb_tarefas set m_tarefa = ?, status = ?, data_atualizacao = ? WHERE id_tarefa = ?;'
+        console.log(dataAtualizacao);
+        const atualizar= await connection.execute(query,[title,status,dataAtualizacao,id]);
 
         return atualizar;
     }catch{

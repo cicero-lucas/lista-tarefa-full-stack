@@ -12,9 +12,11 @@ const vertarefa= async(_request,response)=>{
 
 const createTarefa = async (request, responde) => {
     const createdTasks = await tasksModel.createTarefa(request.body);
+   
     return responde.status(201).json(createdTasks);
 }
 const deletarTarefa= async (request, responde) => {
+   
     const {id} = request.params;
     await tasksModel.deletarTarefa(id);
     return responde.status(204).json();

@@ -7,7 +7,7 @@
     "dev": "nodemon -e js src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "lucas",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
